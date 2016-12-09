@@ -4,19 +4,19 @@
 ##########################################
 
 # Set this for Copyright in the footer
-owner: Name Surname
+owner: Henk-Jan van den Ham
 
 # Optional quote in the footer
 # To disable set enable to false
 quote:
   enable: true
-  quote: Some fancy quote
-  author: John Doe
+  quote: The meat closest to the bone is sweetest.
+  author: Kenyan proverb
 
 # Set this to your main site title. If page doesn't have its own title,
 # then this title will be used.
-title: Aliquam Theme
-
+title: Henk-Jan's site
+subtitle: virology, immunology & bioinformatics
 
 # Following needed for disqus integration
 # Set your 'disqus' account name
