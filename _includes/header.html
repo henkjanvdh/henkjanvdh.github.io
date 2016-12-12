@@ -1,4 +1,10 @@
 <header>
+
+	<a href="{{ site.baseurl }}/index.html"> 
+			<h2>{{ site.title }} </h2>
+			{{ site.subtitle }} 
+		<!-- <img src="{{ site.baseurl }}/resources/images/foto.jpg" alt="photo"> -->
+	</a>
     <nav id="main-nav">
         <ul>
 	        <li><a class="fancy-nav" href="{{ site.baseurl }}/index.html">home</a></li>
@@ -7,9 +13,7 @@
                 }}</a></li>
             {% endfor %}
             <li><a class="fancy-nav" href="{{ site.baseurl }}/pages/about.html">about</a></li>
-            <li> <a class="title-nav" href="{{ site.baseurl }}/index.html"> <h3> |> {{ site.owner }}  </h3> </a> </li>
         </ul>
     </nav>
-
 
 </header>

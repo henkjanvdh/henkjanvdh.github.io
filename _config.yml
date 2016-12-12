@@ -15,9 +15,8 @@ quote:
 
 # Set this to your main site title. If page doesn't have its own title,
 # then this title will be used.
-title: Henk-Jan's site
-subtitle: virology, immunology & bioinformatics
-
+title: Henk-Jan van den Ham
+subtitle: VIRO-IMMUNO-BIOINFORMATICS
 # Following needed for disqus integration
 # Set your 'disqus' account name
 disqus:
