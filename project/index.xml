@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Henk-Jan van den Ham</title>
+    <link>/project/</link>
+    <description>Recent content in Projects on Henk-Jan van den Ham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Henk-Jan van den Ham</copyright>
+    <lastBuildDate>Thu, 09 Nov 2017 11:23:31 +0100</lastBuildDate>
+    <atom:link href="/project/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>DC vaccination for HIV</title>
+      <link>/project/hiv/</link>
+      <pubDate>Thu, 09 Nov 2017 11:23:31 +0100</pubDate>
+      
+      <guid>/project/hiv/</guid>
+      <description>&lt;p&gt;To treat HIV-infected individuals, one approach is &lt;em&gt;therapeutic vaccination&lt;/em&gt; that aims to induce durable immunity by reactivating the individual&amp;rsquo;s immune system to HIV. Ideally, this would lead to viral control without taking combined anti-retroviral therapy (cART).&lt;/p&gt;
+
+&lt;p&gt;In this project, we examine several cohorts with -omics technology to try and understand the effect that these DC vaccinations have on vaccinated individuals.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
