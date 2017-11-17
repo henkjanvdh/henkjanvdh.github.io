@@ -95,8 +95,27 @@
     
     <url>
     
+      <loc>/publication/thesis_2010/</loc>
+      <lastmod>2010-06-21T00:00:00+02:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/publication_types/2/</loc>
       <lastmod>2017-08-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication_types/5/</loc>
+      <lastmod>2010-06-21T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -154,6 +173,26 @@
     
     <url>
     
+      <loc>/tags/imputation/</loc>
+      <lastmod>2017-04-30T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/limma/</loc>
+      <lastmod>2017-04-30T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/tags/nederlands/</loc>
       <lastmod>2017-10-31T00:00:00+01:00</lastmod>
       <priority>0</priority>
@@ -166,6 +205,16 @@
     
       <loc>/project/</loc>
       <lastmod>2017-11-09T11:23:31+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/proteomics/</loc>
+      <lastmod>2017-04-30T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
     
