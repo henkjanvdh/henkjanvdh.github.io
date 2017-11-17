@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Henk-Jan van den Ham</title>
-    <link>/post/</link>
+    <link>https://henkjanvdh.github.io/post/</link>
     <description>Recent content in Posts on Henk-Jan van den Ham</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Wat doet een virus?</title>
-      <link>/post/2016-11-21-virgo/</link>
+      <link>https://henkjanvdh.github.io/post/2016-11-21-virgo/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0100</pubDate>
       
-      <guid>/post/2016-11-21-virgo/</guid>
+      <guid>https://henkjanvdh.github.io/post/2016-11-21-virgo/</guid>
       <description>
 
 &lt;p&gt;Wat gebeurt er wanneer je geinfecteerd wordt door een virus?&lt;/p&gt;

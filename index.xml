@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Henk-Jan van den Ham on Henk-Jan van den Ham</title>
-    <link>/</link>
+    <link>https://henkjanvdh.github.io/</link>
     <description>Recent content in Henk-Jan van den Ham on Henk-Jan van den Ham</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>DC vaccination for HIV</title>
-      <link>/project/hiv/</link>
+      <link>https://henkjanvdh.github.io/project/hiv/</link>
       <pubDate>Thu, 09 Nov 2017 11:23:31 +0100</pubDate>
       
-      <guid>/project/hiv/</guid>
+      <guid>https://henkjanvdh.github.io/project/hiv/</guid>
       <description>&lt;p&gt;To treat HIV-infected individuals, one approach is &lt;em&gt;therapeutic vaccination&lt;/em&gt; that aims to induce durable immunity by reactivating the individual&amp;rsquo;s immune system to HIV. Ideally, this would lead to viral control without taking combined anti-retroviral therapy (cART).&lt;/p&gt;
 
 &lt;p&gt;In this project, we examine several cohorts with -omics technology to try and understand the effect that these DC vaccinations have on vaccinated individuals.&lt;/p&gt;
@@ -24,38 +24,38 @@
     
     <item>
       <title>Transcriptomic Analyses Reveal Differential Gene Expression of Immune and Cell Death Pathways in the Brains of Mice Infected with West Nile Virus and Chikungunya Virus</title>
-      <link>/publication/lim_fm17/</link>
+      <link>https://henkjanvdh.github.io/publication/lim_fm17/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/lim_fm17/</guid>
+      <guid>https://henkjanvdh.github.io/publication/lim_fm17/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Identification of differentially expressed peptides in high-throughput proteomics data</title>
-      <link>/publication/vanooijen_bb17/</link>
+      <link>https://henkjanvdh.github.io/publication/vanooijen_bb17/</link>
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0200</pubDate>
       
-      <guid>/publication/vanooijen_bb17/</guid>
+      <guid>https://henkjanvdh.github.io/publication/vanooijen_bb17/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Example Talk</title>
-      <link>/talk/example-talk/</link>
+      <link>https://henkjanvdh.github.io/talk/example-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0100</pubDate>
       
-      <guid>/talk/example-talk/</guid>
+      <guid>https://henkjanvdh.github.io/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Wat doet een virus?</title>
-      <link>/post/2016-11-21-virgo/</link>
+      <link>https://henkjanvdh.github.io/post/2016-11-21-virgo/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0100</pubDate>
       
-      <guid>/post/2016-11-21-virgo/</guid>
+      <guid>https://henkjanvdh.github.io/post/2016-11-21-virgo/</guid>
       <description>
 
 &lt;p&gt;Wat gebeurt er wanneer je geinfecteerd wordt door een virus?&lt;/p&gt;
@@ -72,19 +72,19 @@
     
     <item>
       <title>DC immunotherapy in HIV-1 infection induces a major blood transcriptome shift</title>
-      <link>/publication/degoede_v15/</link>
+      <link>https://henkjanvdh.github.io/publication/degoede_v15/</link>
       <pubDate>Fri, 24 Apr 2015 00:00:00 +0200</pubDate>
       
-      <guid>/publication/degoede_v15/</guid>
+      <guid>https://henkjanvdh.github.io/publication/degoede_v15/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A better understanding of helper T cell differentiation using mathematical modelling and bioinformatics</title>
-      <link>/publication/thesis_2010/</link>
+      <link>https://henkjanvdh.github.io/publication/thesis_2010/</link>
       <pubDate>Mon, 21 Jun 2010 00:00:00 +0200</pubDate>
       
-      <guid>/publication/thesis_2010/</guid>
+      <guid>https://henkjanvdh.github.io/publication/thesis_2010/</guid>
       <description></description>
     </item>
     
