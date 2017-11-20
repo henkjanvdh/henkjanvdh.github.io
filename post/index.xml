@@ -11,6 +11,46 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Diversity measures for antibodies: the adapted Shannon diversity index (ASDI)</title>
+      <link>https://henkjanvdh.github.io/post/2017-11-20-diversity/</link>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://henkjanvdh.github.io/post/2017-11-20-diversity/</guid>
+      <description>
+
+&lt;p&gt;The diversity index is based on diversity concepts from ecology, where it is used to estimate the diversity of plant and animal life. You can think of the diversity index as a way to perform a weighted count of species. If you would like to compare the species diversity in different habitats, there are several ways of doing that:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You can count the number of different species present (but sensitive to &amp;lsquo;single&amp;rsquo; animals that are just &amp;lsquo;visiting&amp;rsquo; a habitat)&lt;/li&gt;
+&lt;li&gt;You can use the number of animals of which there are at least an &lt;em&gt;x&lt;/em&gt; number (but difficult to determine &lt;em&gt;x&lt;/em&gt;, e.g., 5 elephants is deemed more important for diversity than 5 ants)&lt;/li&gt;
+&lt;li&gt;Use a weighted average whereby animals are given more importance if there is many of them (that is the one we&amp;rsquo;re using!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;diversity-measures-101&#34;&gt;Diversity measures 101&lt;/h2&gt;
+
+&lt;p&gt;There are many different diversity measures. Each of them has a different range and all their values have different interpretations. To make life easy, these values can be represented as the number of responses of equal magnitude so as to provide an intuitive measure that everyone may understand. So a diversity of 5 means: &lt;em&gt;a diversity comparable to having 5 equally abundant species&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In a highly cited (and highly recommended!) paper, &lt;a href=&#34;10.1111/j.2006.0030-1299.14714.x&#34; target=&#34;_blank&#34;&gt;L. Jost, Oikos 2006&lt;/a&gt;) shows that many diversity measures map onto one another if you introduce a weighting factor that tunes the relative contribution of high- and low-abundant species to the final estimate of diversity. The final form of diversity equation looks scary, but is quite easy to understand.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://henkjanvdh.github.io/img/diversityExample.png&#34; alt=&#34;Diversity measure example&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where $D$ is the diversity measure of order $q$, $S$ is the number of species, and $p_i$ the proportion of animals from a specific species, expressed as a fraction.  Depending on how you weigh high-abundant vs low-abundant species (that would be parameter $q$), you obtain a different estimate of diversity.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;interpretation&lt;/em&gt; of this index is diversity equivalent to that number of equally abundent species. For instance, a diversity of 3 means: 3 equally abundent species.&lt;/p&gt;
+
+&lt;h2 id=&#34;adaptation-to-antibody-measurements&#34;&gt;Adaptation to antibody measurements&lt;/h2&gt;
+
+&lt;p&gt;The index is adapted to be used for evaluating antibody measurements, i.e., fluorescence. To quantify diversity of responses, this index can be used. However, to down-weigh the influence of unprotective responses (i.e., those with a low fluorescence value), we include a parameter that sets the minimal level of what is considered an effective response: an &lt;em&gt;offset&lt;/em&gt; or &lt;em&gt;anchor&lt;/em&gt; value to distinguish between background and real responses.&lt;/p&gt;
+
+&lt;p&gt;The anchor value is taken along when the fractions of species are calculated. Please note that the anchor is not a cutoff, because the values below it are given less weight - but still taken into account.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://henkjanvdh.github.io/img/diversityAntigenArray.png&#34; alt=&#34;Diversity measure example for antigen arrays&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&#34;https://henkjanvdh.github.io/publication/freidl_sr16/&#34; target=&#34;_blank&#34;&gt;our paper in Scientific Reports&lt;/a&gt; for more details. &lt;a href=&#34;https://images.nature.com/original/nature-assets/srep/2016/160208/srep20385/extref/srep20385-s1.pdf&#34; target=&#34;_blank&#34;&gt;Supplementary material S3&lt;/a&gt; contains the full derivation of the adapted index.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Wat doet een virus?</title>
       <link>https://henkjanvdh.github.io/post/2016-11-21-virgo/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0100</pubDate>
