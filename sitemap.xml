@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://henkjanvdh.github.io/post/2017-11-20-diversity/</loc>
+      <lastmod>2017-11-20T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://henkjanvdh.github.io/project/hiv/</loc>
       <lastmod>2017-11-09T11:23:31+01:00</lastmod>
     </url>
@@ -151,8 +160,18 @@
     
     <url>
     
+      <loc>https://henkjanvdh.github.io/tags/asdi/</loc>
+      <lastmod>2017-11-20T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://henkjanvdh.github.io/tags/antigen-array/</loc>
-      <lastmod>2016-02-08T00:00:00+01:00</lastmod>
+      <lastmod>2017-11-20T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -221,7 +240,7 @@
     <url>
     
       <loc>https://henkjanvdh.github.io/tags/diversity-index/</loc>
-      <lastmod>2016-02-08T00:00:00+01:00</lastmod>
+      <lastmod>2017-11-20T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -281,7 +300,7 @@
     <url>
     
       <loc>https://henkjanvdh.github.io/tags/methodology/</loc>
-      <lastmod>2017-04-30T00:00:00+02:00</lastmod>
+      <lastmod>2017-11-20T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -322,6 +341,16 @@
     
       <loc>https://henkjanvdh.github.io/publication_types/</loc>
       <lastmod>2017-08-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://henkjanvdh.github.io/tags/r/</loc>
+      <lastmod>2017-11-20T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
