@@ -11,6 +11,18 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Dengue</title>
+      <link>https://henkjanvdh.github.io/project/dengue/</link>
+      <pubDate>Wed, 22 Nov 2017 16:57:51 +0100</pubDate>
+      
+      <guid>https://henkjanvdh.github.io/project/dengue/</guid>
+      <description>&lt;p&gt;Dengue virus infection typically has mild symptomes, but can also cause hemorrhaegic fever and death in severe cases. Dengue has four serotypes and a secondary infection with a different serotype is associated with more severe symptomes.&lt;/p&gt;
+
+&lt;p&gt;In this project, we use - amongst others - transcriptome and proteome profiling to find markers that associate with severe disease.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Diversity measures for antibodies: the adapted Shannon diversity index (ASDI)</title>
       <link>https://henkjanvdh.github.io/post/2017-11-20-diversity/</link>
       <pubDate>Mon, 20 Nov 2017 00:00:00 +0100</pubDate>
@@ -143,6 +155,33 @@
       <pubDate>Fri, 13 Mar 2015 00:00:00 +0100</pubDate>
       
       <guid>https://henkjanvdh.github.io/publication/vandeweg_pntd15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hyperferritinaemia in Dengue Virus Infected Patients Is Associated with Immune Activation and Coagulation Disturbances</title>
+      <link>https://henkjanvdh.github.io/publication/vandeweg_pntd14/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0200</pubDate>
+      
+      <guid>https://henkjanvdh.github.io/publication/vandeweg_pntd14/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Serum angiopoietin-2 and soluble VEGF receptor 2 are surrogate markers for plasma leakage in patients with acute dengue virus infection</title>
+      <link>https://henkjanvdh.github.io/publication/vandeweg_jcv14/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0200</pubDate>
+      
+      <guid>https://henkjanvdh.github.io/publication/vandeweg_jcv14/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microbial Translocation Is Associated with Extensive Immune Activation in Dengue Virus Infected Patients with Severe Disease</title>
+      <link>https://henkjanvdh.github.io/publication/vandeweg_pntd13/</link>
+      <pubDate>Thu, 23 May 2013 00:00:00 +0200</pubDate>
+      
+      <guid>https://henkjanvdh.github.io/publication/vandeweg_pntd13/</guid>
       <description></description>
     </item>
     
