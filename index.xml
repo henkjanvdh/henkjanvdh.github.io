@@ -11,6 +11,139 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>qPCR analysis</title>
+      <link>https://henkjanvdh.github.io/post/2017-12-11-qpcr/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://henkjanvdh.github.io/post/2017-12-11-qpcr/</guid>
+      <description>
+
+&lt;p&gt;This post does a step-by-step analysis of quantitative PCR data. It includes compensation for amplification efficiency and the incorporation of both single and multiple loading controls. If you like derivations, keep reading; if you&amp;rsquo;d rather skip the mathematics, go to the &lt;a href=&#34;#ddct&#34;&gt;final forms&lt;/a&gt;. Excel implementations are provided at the &lt;a href=&#34;#excel&#34;&gt;end&lt;/a&gt; of this post.&lt;/p&gt;
+
+&lt;h3 id=&#34;ct-values-101&#34;&gt;Ct values 101&lt;/h3&gt;
+
+&lt;p&gt;qPCR yields Ct-values, which is the number of amplification cycles needed before a fluorescent signal is detected. Every cycle, the amount of nucleic material doubles, up to a maximum, which is effectively the limit of detection. The relationship between the number of cycles ($Ct$) and the amount of amplified nucleic material ($C_n$) is:&lt;/p&gt;
+
+&lt;p&gt;$$ C_n = Cq \cdot a^n $$&lt;/p&gt;
+
+&lt;p&gt;where $a$ is the PCR amplification efficiency (which is \( \approx 2 \), $n$ is the number of cycles, and $Cq$ is the initial amount of material. With qPCR, we measure $n$ when $C_n$ reaches a specific fixed value $K$:&lt;/p&gt;
+
+&lt;p&gt;$$ Cq \cdot a^{Ct} = K $$
+$$ Cq = \frac{K}{a^{Ct}}$$&lt;/p&gt;
+
+&lt;p&gt;qPCR data is often presented is the form of a Ct value. Effectively, this is expression data on a $log_a$ scale:&lt;/p&gt;
+
+&lt;p&gt;$$ Ct = log_a\left(\frac{K}{Cq}\right) = -log_a\left(\frac{Cq}{K}\right) $$&lt;/p&gt;
+
+&lt;h3 id=&#34;accounting-for-qpcr-amplification-efficiency&#34;&gt;Accounting for qPCR amplification efficiency&lt;/h3&gt;
+
+&lt;p&gt;When interpreting Ct values, we need to take some technical points into account. The qPCR reaction efficiency need not be perfect, which means that the number of Ct cycles is overestimated. This will in turn cause differences in outcomes, in particular when the data are generated on different plates or with different batches of reagents. Using a calibration setup (see &lt;a href=&#34;http://www3.appliedbiosystems.com/cms/groups/mcb_marketing/documents/generaldocuments/cms_040377.pdf&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Taqman efficiency calculation&lt;/em&gt;&lt;/a&gt;), the efficiency can be measured and incorporated into the analysis.&lt;/p&gt;
+
+&lt;p&gt;Using the equality $log_y(x) = \frac{log_z(x)}{log_z(y)}$, we take change the Ct values to a base 2 logarithm for simplicity:&lt;/p&gt;
+
+&lt;p&gt;$$ Ct_{norm} = -log_2(a) \cdot log_2{\left(\frac{Cq}{K}\right)} = log_2(a) \cdot Ct$$&lt;/p&gt;
+
+&lt;h3 id=&#34;accounting-for-sample-loading-delta-ct&#34;&gt;Accounting for sample loading ($- \Delta Ct$)&lt;/h3&gt;
+
+&lt;p&gt;Furthermore, we need to take into account differences in sample content and loading. This is done by selecting a reference or &amp;lsquo;household&amp;rsquo; gene that is assumed to have the same concentration in all samples. Therefore, results are given as $\Delta Ct$ relative to the household gene. To make the results more intuitive by having an increasing value representing increasing expression, the $-\Delta Ct$ is typically presented:&lt;/p&gt;
+
+&lt;p&gt;$$ -\Delta Ct_t = log_2(a_r) \cdot Ct_r - log_2(a_t) \cdot Ct_t $$&lt;/p&gt;
+
+&lt;p&gt;where $a_r$ and $Ct_r$ refer to the reference (i.e., household), and $a_t$ and $Ct_t$ refer to the target gene values.&lt;/p&gt;
+
+&lt;h3 id=&#34;readout-changes-relative-to-control-delta-delta-ct&#34;&gt;Readout: Changes relative to control ($-\Delta\Delta Ct$)&lt;/h3&gt;
+
+&lt;p&gt;Now that we have properly calibrated and normalized the values, we can compare treatment to control. Since we are then taking differences between two ($-\Delta Ct$) values, the resulting value is typically refered to as ($-\Delta\Delta Ct$):&lt;/p&gt;
+
+&lt;p&gt;$$ -\Delta\Delta Ct = \Delta Ct_m  - \Delta Ct_t $$&lt;/p&gt;
+
+&lt;p&gt;If we start from the non-calibrated Ct values of the mock ($Ct_m$), target ($Ct_t$) and references ($Ct_r$ and $Ct_s$), this is the expression for a normalized $-\Delta\Delta Ct_n$:&lt;/p&gt;
+
+&lt;p&gt;$$ -\Delta\Delta Ct = \log_2 \left( a_m \right) \cdot Ct_m - \log_2 \left( a_l \right) \cdot Ct_l - \log_2 \left(a_t\right) \cdot Ct_t - \log_2\left(a_t\right) \cdot Ct_t $$&lt;/p&gt;
+
+&lt;h3 id=&#34;incorporating-multiple-reference-genes&#34;&gt;Incorporating multiple reference genes:&lt;/h3&gt;
+
+&lt;p&gt;Selecting a relevant household gene is key to obtaining reliable results in qPCR, but depending on the circumstances, a single household reference may not be enough. Using multiple reference genes is then a good way to obtain more stable normalized Ct values. This involves taking the average value of the references and using it to normalize the data.&lt;/p&gt;
+
+&lt;p&gt;$$ -\Delta Ct_t = log_2(a_r) \cdot Ct_r - log_2(a_t) \cdot Ct_t $$&lt;/p&gt;
+
+&lt;p&gt;We replace $log_2(a_r) \cdot Ct_r$ with the mean of multiple genes. This mean can be computed at the Cq and Ct value level, but this gives non-identical results. We use the Cq level (see also Hellemans et al, 2007, &lt;a href=&#34;https://doi.org/10.1186/gb-2007-8-2-r19&#34; target=&#34;_blank&#34;&gt;10.1186/gb-2007-8-2-r19&lt;/a&gt;),&lt;/p&gt;
+
+&lt;p&gt;$$ log_2(a_r) \cdot Ct_r \rightarrow  log_2 \left( \sum_i^{r \rightarrow n} a_i^{-Ct_i} \right)$$&lt;/p&gt;
+
+&lt;p&gt;but the disadvantage of this approach is that highly expressed genes dominate the normalization. High values tend to have high variance at the Cq level, and hence they dominate the mean. Since this data is typically exponentially or log-normally distributed, we could use another estimate of average expression, such as log-average (see Dvinge &amp;amp; Bertone, 2009, &lt;a href=&#34;https://doi.org/10.1093/bioinformatics/btp578&#34; target=&#34;_blank&#34;&gt;10.1093/bioinformatics/btp578&lt;/a&gt;). Using the latter option gives a very intuitive solution to computation of normalized Ct data:&lt;/p&gt;
+
+&lt;p&gt;$$ log_2(a_r) \cdot Ct_r \rightarrow  \frac{1}{n} \sum_i^{r \leftrightarrow n}  log_2\left( a_i \right) \cdot Ct_i $$&lt;/p&gt;
+
+&lt;p&gt;where $r \leftrightarrow n$ is the the number of reference genes we take the mean of, which each have there specific PCR efficiency factor $a_i$ and Ct value $Ct_i$. This solution is simply using the mean normalized Ct value of the reference genes to compute corrected  target Ct values. The final $-\Delta Ct_t$ then becomes&lt;/p&gt;
+
+&lt;p&gt;$$ -\Delta Ct_t = \left[ \frac{1}{n} \sum_i^{r \leftrightarrow n}  log_2\left( a_i \right) \cdot Ct_i \right] - log_2\left(a_t\right) \cdot Ct_t $$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a name=&#34;ddct&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;delta-delta-ct-formulae&#34;&gt;$-\Delta (\Delta) Ct$ formulae&lt;/h2&gt;
+
+&lt;p&gt;In summary, the $-\Delta Ct$ with multiple log-averaged household (reference) genes is:&lt;/p&gt;
+
+&lt;p&gt;$$ -\Delta Ct_t = \left[ \frac{1}{n} \sum_i^{r \leftrightarrow n}  log_2\left( a_i \right) \cdot Ct_i \right] - log_2\left(a_t\right) \cdot Ct_t $$&lt;/p&gt;
+
+&lt;p&gt;and the $-\Delta\Delta Ct$ (i.e., target vs mock $Ct$, $\left(-\Delta Ct_t \right) - \left(-\Delta Ct_m \right)$) then follows:&lt;/p&gt;
+
+&lt;p&gt;$$ -\Delta\Delta Ct = \left[\left(\frac{1}{n} \sum_j^{s \leftrightarrow n}  log_2\left( a_j \right)  \cdot Ct_j \right) - log_2\left(a_m\right) \cdot Ct_m \right] $$&lt;/p&gt;
+
+&lt;p&gt;$$ - \left[ \left( \frac{1}{n} \sum_i^{r \leftrightarrow n}  log_2\left( a_i \right) \cdot Ct_i \right) - log_2\left(a_t\right) \cdot Ct_t \right]$$&lt;/p&gt;
+
+&lt;p&gt;where $a_m$, $Ct_m$, $a_j$ and $Ct_j$ are the mock and mock reference values, and $a_t$, $Ct_t$, $a_i$ and $Ct_i$ are the target and target reference values, respectively.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a name=&#34;excel&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;delta-delta-ct-analysis-in-excel&#34;&gt;$-\Delta (\Delta) Ct$ analysis in Excel&lt;/h2&gt;
+
+&lt;p&gt;The implementation in Excel is pretty straight-forward if you use log-averaging:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;calibrate all of the raw Ct values by multiplying them with the $log_2$ of the PCR amplification efficiency for every gene on every plate:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;=LOG({PCR E},2)*{Ct}&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compute the mean of the calibrated references (if more than one):&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;=AVERAGE({calibrated Ct references})&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Subtract the calibrated gene Ct value from the (average) calibrated reference Ct value to get the $-\Delta Ct$:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;={calibrated mean reference Ct}-{calibrated target Ct}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;These values can be used to test for statistical significance between sample groups. The difference between a treatment and a mock group is then the $-\Delta\Delta Ct$ value:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;{normalized treatment} = {calibrated treatment mean reference Ct} - {calibrated treatment target Ct}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;{normalized mock} = {calibrated mock mean reference Ct} - {calibrated mock target Ct}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;$-\Delta\Delta Ct$&lt;code&gt;={normalized mock} - {normalized treatment}&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Taqman efficiency calculation, &lt;a href=&#34;http://www3.appliedbiosystems.com/cms/groups/mcb_marketing/documents/generaldocuments/cms_040377.pdf&#34; target=&#34;_blank&#34;&gt;Applied BioSystems Manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Dvinge &amp;amp; Bertone, 2009, &lt;a href=&#34;https://doi.org/10.1093/bioinformatics/btp578&#34; target=&#34;_blank&#34;&gt;10.1093/bioinformatics/btp578&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hellemans et al, 2007, &lt;a href=&#34;https://doi.org/10.1186/gb-2007-8-2-r19&#34; target=&#34;_blank&#34;&gt;10.1186/gb-2007-8-2-r19&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Dengue</title>
       <link>https://henkjanvdh.github.io/project/dengue/</link>
       <pubDate>Wed, 22 Nov 2017 16:57:51 +0100</pubDate>
@@ -182,15 +315,6 @@
       <pubDate>Thu, 23 May 2013 00:00:00 +0200</pubDate>
       
       <guid>https://henkjanvdh.github.io/publication/vandeweg_pntd13/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>A better understanding of helper T cell differentiation using mathematical modelling and bioinformatics</title>
-      <link>https://henkjanvdh.github.io/publication/thesis_2010/</link>
-      <pubDate>Mon, 21 Jun 2010 00:00:00 +0200</pubDate>
-      
-      <guid>https://henkjanvdh.github.io/publication/thesis_2010/</guid>
       <description></description>
     </item>
     

@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://henkjanvdh.github.io/post/2017-12-11-qpcr/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://henkjanvdh.github.io/project/dengue/</loc>
       <lastmod>2017-11-22T16:57:51+01:00</lastmod>
     </url>
@@ -295,6 +304,26 @@
     
     <url>
     
+      <loc>https://henkjanvdh.github.io/tags/delta-ct/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://henkjanvdh.github.io/tags/delta-delta-ct/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://henkjanvdh.github.io/tags/dengue/</loc>
       <lastmod>2015-03-13T00:00:00+01:00</lastmod>
       <priority>0</priority>
@@ -307,6 +336,26 @@
     
       <loc>https://henkjanvdh.github.io/tags/diversity-index/</loc>
       <lastmod>2017-11-20T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://henkjanvdh.github.io/tags/double-delta-ct/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://henkjanvdh.github.io/tags/excel/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -385,6 +434,26 @@
     
     <url>
     
+      <loc>https://henkjanvdh.github.io/tags/normalized-ct/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://henkjanvdh.github.io/tags/pcr/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://henkjanvdh.github.io/project/</loc>
       <lastmod>2017-11-22T16:57:51+01:00</lastmod>
       <priority>0</priority>
@@ -407,6 +476,36 @@
     
       <loc>https://henkjanvdh.github.io/publication_types/</loc>
       <lastmod>2014-10-11T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://henkjanvdh.github.io/tags/qpcr/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://henkjanvdh.github.io/tags/qrt-pcr/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://henkjanvdh.github.io/tags/quantitative-pcr/</loc>
+      <lastmod>2017-12-11T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
